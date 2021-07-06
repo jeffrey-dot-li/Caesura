@@ -1,13 +1,24 @@
 {
-  'parser': 'vue-eslint-parser',
-  'extends': [
-    '@nuxtjs/eslint-config-typescript',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:vue/recommended'
+  "parser": "vue-eslint-parser",
+  "extends": [
+    "@antfu",
+    "@nuxtjs/eslint-config-typescript",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:vue/recommended"
   ],
-  'rules': {
-    '@typescript-eslint/explicit-function-return-type': ['error'],
-    'lines-between-class-members': ['error', 'always', { 'exceptAfterSingleLine': true }],
-    'space-before-function-paren': ['error'],
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": ["error"],
+    "lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
+    "space-before-function-paren": ["error"],
+    "@typescript-eslint/no-unused-vars": "warn",
+    "no-empty-pattern" : "warn",
+    "semi": [
+      "warn",
+      "always"
+    ],
+    "@typescript-eslint/semi": [
+      "warn",
+      "always"
+    ]
   }
 }

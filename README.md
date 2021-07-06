@@ -1,4 +1,9 @@
-# Nuxt TypeScript starter template
+# Opinionated Nuxt Typescript Template
+
+Forked from [@nuxt-community/typescript-template](https://github.com/nuxt-community/typescript-template),
+this project has [windicss](https://github.com/windicss/windicss), [scss](https://sass-lang.com/) and [pnpm](https://github.com/pnpm/pnpm) configured by default so I don't have to spend fucking hours configuring a new project every couple weeks.
+
+--------
 
 A [Nuxt.js](https://github.com/nuxt/nuxt.js) + [@nuxt/typescript](https://github.com/nuxt/typescript) starter project template.
 

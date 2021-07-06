@@ -1,0 +1,115 @@
+/*=========================================================================================
+  File Name: main.scss
+  Description: Main scss file. Imports other scss partials from 'vuexy' folder
+  ----------------------------------------------------------------------------------------
+  Item Name: Vuexy - Vuejs, HTML & Laravel Admin Dashboard Template
+  Author: Pixinvent
+  Author URL: http://www.themeforest.net/user/pixinvent
+==========================================================================================*/
+
+// Custom components css (namespace cleared)
+
+//Fonts
+// @import 'fonts.css';
+
+
+img,
+svg,
+button,
+a {
+	-webkit-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-app-region: no-drag;
+}
+
+button,
+a {
+	& {
+		cursor: pointer;
+	}
+}
+
+// @import "./grid.scss";
+// @import "./nuxt-xd.scss";
+    //OLD FROM MAIN.CSS
+:root {
+	--bg-aspect-ratio: calc(1356 / 898);
+}
+
+.object-cover {
+	overflow: hidden;
+}
+
+html {
+	min-height: 100vh;
+}
+
+body {
+	height: auto;
+	&.modal-open {
+		overflow-y: hidden;
+	}
+}
+
+.bg-repeat {
+	background-repeat: repeat;
+}
+
+.bg-img {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.absolute-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.display-none {
+	display: none;
+}
+
+
+@mixin hideScrollbar {
+	// https://blogs.msdn.microsoft.com/kurlak/2013/11/03/hiding-vertical-scrollbars-with-pure-css-in-chrome-ie-6-firefox-opera-and-safari/
+	// There is a CSS rule that can hide scrollbars in Webkit-based browsers (Chrome and Safari).
+	// &::-webkit-scrollbar {
+	//   width: 0 !important
+	// }
+
+	&::-webkit-scrollbar {
+		height: 0;
+		width: 0;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		height: 0;
+		width: 0;
+	}
+
+	&::-webkit-scrollbar-track {
+		height: 0;
+		width: 0;
+	}
+	scrollbar-height: none; /* Firefox 64 */
+	scrollbar-width: none; /* Firefox 64 */
+}
+.layout-enter-active,
+.layout-leave-active {
+	transition: opacity 0.5s;
+}
+.layout-enter,
+.layout-leave-active {
+	opacity: 0;
+}
+.page-enter-active,
+.page-leave-active {
+	transition: opacity 0.3s;
+}
+.page-enter,
+.page-leave-to {
+	opacity: 0;
+}

@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="w-[50%]">
     <ul>
       <li
         v-for="page in ['Options API', 'Class API', 'Composition API']"

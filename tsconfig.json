@@ -12,16 +12,22 @@
     "experimentalDecorators": true,
     "sourceMap": true,
     "strict": true,
+    "allowSyntheticDefaultImports": true,
     "noEmit": true,
     "baseUrl": ".",
+    "resolveJsonModule": true,
     "importsNotUsedAsValues": "preserve",
+    "importHelpers": true, 
+    "jsx": "preserve",
     "paths": {
       "~/*": ["./*"],
       "@/*": ["./*"]
     },
     "types": [
       "@types/node",
-      "@nuxt/types"
+      "@nuxt/types",
+      "./typings"
+      
     ]
   },
   "exclude": [
