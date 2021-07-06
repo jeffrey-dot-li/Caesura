@@ -13,8 +13,10 @@ Create your repository by [Use this template](https://github.com/nuxt-community/
 
 Then, run below command and follow its message.
 
-```
-./init.sh
+```sh
+nvm use 14.2.0
+npm i -g pnpm
+pnpm i
 ```
 
 The command will ask your preference for the API to write Vue component among:
@@ -28,7 +30,7 @@ The command will ask your preference for the API to write Vue component among:
 ### Run Development server
 
 ```sh
-npm run dev
+pnpm dev
 ```
 
 Go to [http://localhost:3000](http://localhost:3000)
@@ -36,8 +38,8 @@ Go to [http://localhost:3000](http://localhost:3000)
 ### Build/Run SSR enabled application
 
 ```sh
-npm run build
-npm start
+pnpm build
+pnpm start
 ```
 
 ### Static Generation
@@ -45,7 +47,7 @@ npm start
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e5bf3478-1cb8-44c4-8aeb-040083bd39ca/deploy-status)](https://nuxt-ts-template.netlify.com/)
 
 ```sh
-npm run generate #=> Then distribute /dist
+pnpm generate #=> Then distribute /dist
 ```
 
 ## FAQ
