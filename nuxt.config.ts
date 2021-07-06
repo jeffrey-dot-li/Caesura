@@ -1,14 +1,20 @@
 import type { NuxtConfig } from '@nuxt/types';
+import googleFonts from './google-fonts';
 
 const config: NuxtConfig = {
   build: {
+    postcss: {
+      plugins: {
+        'postcss-nested': {}
+      }
+    }
   },
   buildModules: [
     '@nuxtjs/composition-api/module',
     '@nuxt/typescript-build',
     'nuxt-windicss'
   ],
-  css: ['~/assets/scss/main.scss'],
+  css: ['vuesax/dist/vuesax.css', '~/assets/fonts/fonts.css', '~/assets/scss/main.scss'],
   env: {},
   head: {
     title: 'Caesura',
@@ -18,12 +24,18 @@ const config: NuxtConfig = {
       { hid: 'description', name: 'description', content: '' }
       // TODO
     ],
-    link: []
+    link: [
+      {
+        rel: 'stylesheet',
+        href: googleFonts
+      }
+    ]
   },
   modules: ['@nuxtjs/style-resources'],
   loading: { color: '#0c64c1' },
   plugins: [
-    '~/plugins/truncate'
+    '~/plugins/truncate',
+    '~/plugins/vuesax'
   ]
 };
 

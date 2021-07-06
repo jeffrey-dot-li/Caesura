@@ -8,6 +8,9 @@ import { defineConfig } from 'windicss/helpers';
 import colors from 'windicss/colors';
 import typography from 'windicss/plugin/typography';
 
+import { FontFamilyReference } from './google-fonts';
+console.log(FontFamilyReference);
+
 export default defineConfig({
   darkMode: 'class',
   plugins: [
@@ -15,18 +18,16 @@ export default defineConfig({
   ],
   attributify: true,
   theme: {
-    fontFamily: {
-      display: ['Quicksand', 'sans-serif'],
-      body: ['Quicksand', 'sans-serif'],
-      ginger: ['ginger-light', 'sans-serif'],
-      'ginger-n': ['ginger-normal', 'sans-serif'],
-      'ginger-b': ['ginger-bold', 'sans-serif'],
-      title: ['Oswald', 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif'],
-      open: ['Open Sans']
-    },
     extend: {
+      fontFamily: FontFamilyReference,
+      colors:
+      {
+        primary: '#ffba4c'
+      },
+
       typography: {
         DEFAULT: {
+
           css: {
             maxWidth: '65ch',
             color: 'inherit',

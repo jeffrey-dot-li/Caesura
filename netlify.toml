@@ -1,4 +1,4 @@
 [build]
   publish = "dist/"
-  command = "npm run generate"
-  environment = { NODE_VERSION = "12" }
+  environment = { NODE_VERSION = "14" }
+  command = "npx pnpm i --store=node_modules/.pnpm-store && npx pnpm generate"

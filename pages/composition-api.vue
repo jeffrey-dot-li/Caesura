@@ -44,10 +44,10 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, ref, useAsync, useContext, useFetch, useMeta } from '@nuxtjs/composition-api'
+import { computed, defineComponent, ref, useAsync, useContext, useFetch, useMeta } from '@nuxtjs/composition-api';
 
-import type { RootState } from '~/store'
-import { namespace as settingStoreNamespace, SettingState, actionType } from '~/store/setting'
+import type { RootState } from '~/store';
+import { namespace as settingStoreNamespace, SettingState, actionType } from '~/store/setting';
 
 interface ToDo {
   userId: number
@@ -61,25 +61,25 @@ export default defineComponent({
   middleware: 'user-agent',
 
   setup (_props, context) {
-    const message = ref("I'm defined on data()")
-    const fetchedTodos = ref<ToDo[]>([])
+    const message = ref("I'm defined on data()");
+    const fetchedTodos = ref<ToDo[]>([]);
 
-    const descriptionOnStore = computed(() => (context.root.$store.state as RootState).description)
-    const computedMessage = computed(() => message.value.replace('data()', 'computed()'))
-    const isDarkMode = computed(() => (context.root.$store.state.setting as SettingState).darkMode)
+    const descriptionOnStore = computed(() => (context.root.$store.state as RootState).description);
+    const computedMessage = computed(() => message.value.replace('data()', 'computed()'));
+    const isDarkMode = computed(() => (context.root.$store.state.setting as SettingState).darkMode);
 
     const toggleDarkMode = (): void => {
-      context.root.$store.dispatch(`${settingStoreNamespace}/${actionType.TOGGLE_DARK_MODE}`)
-    }
+      context.root.$store.dispatch(`${settingStoreNamespace}/${actionType.TOGGLE_DARK_MODE}`);
+    };
 
-    const asyncMessage = useAsync(() => "I'm defined on asyncData()")
-    const userAgent = useAsync(() => useContext().userAgent)
+    const asyncMessage = useAsync(() => "I'm defined on asyncData()");
+    const userAgent = useAsync(() => useContext().userAgent);
 
     const { fetchState } = useFetch(() => {
       return window.fetch('https://jsonplaceholder.typicode.com/todos')
         .then(response => response.json())
-        .then((data: ToDo[]) => { fetchedTodos.value = data })
-    })
+        .then((data: ToDo[]) => { fetchedTodos.value = data; });
+    });
 
     useMeta(() => ({
       title: 'Composition API Demo',
@@ -87,7 +87,7 @@ export default defineComponent({
         name: 'message',
         content: computedMessage.value
       }]
-    }))
+    }));
 
     return {
       message,
@@ -99,9 +99,9 @@ export default defineComponent({
       descriptionOnStore,
       computedMessage,
       isDarkMode
-    }
+    };
   },
 
   head: {}
-})
+});
 </script>

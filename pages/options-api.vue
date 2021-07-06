@@ -44,12 +44,12 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-import { MetaInfo } from 'vue-meta'
-import { mapActions, mapState } from 'vuex'
+import Vue from 'vue';
+import { MetaInfo } from 'vue-meta';
+import { mapActions, mapState } from 'vuex';
 
-import type { RootState } from '~/store'
-import { actionType, namespace as settingStoreNamespace, SettingState } from '~/store/setting'
+import type { RootState } from '~/store';
+import { actionType, namespace as settingStoreNamespace, SettingState } from '~/store/setting';
 
 interface ToDo {
   userId: number
@@ -66,7 +66,7 @@ export default Vue.extend({
     return {
       asyncMessage: "I'm defined on asyncData()",
       userAgent: context.userAgent
-    }
+    };
   },
 
   data () {
@@ -75,13 +75,13 @@ export default Vue.extend({
       fetchedTodos: [] as ToDo[],
       asyncMessage: 'I will be overwritten by asyncData',
       userAgent: 'I will be overwritten by asyncData'
-    }
+    };
   },
 
   fetch () {
     return fetch('https://jsonplaceholder.typicode.com/todos')
       .then(response => response.json())
-      .then((data: ToDo[]) => { this.fetchedTodos = data })
+      .then((data: ToDo[]) => { this.fetchedTodos = data; });
   },
 
   head (): MetaInfo {
@@ -91,12 +91,12 @@ export default Vue.extend({
         name: 'message',
         content: this.computedMessage
       }]
-    }
+    };
   },
 
   computed: {
     computedMessage (): string {
-      return this.message.replace('data()', 'computed()')
+      return this.message.replace('data()', 'computed()');
     },
 
     ...mapState({
@@ -113,5 +113,5 @@ export default Vue.extend({
       toggleDarkMode: actionType.TOGGLE_DARK_MODE
     })
   }
-})
+});
 </script>

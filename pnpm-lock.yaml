@@ -7,32 +7,43 @@ specifiers:
   '@nuxtjs/composition-api': 0.24.6
   '@nuxtjs/eslint-config-typescript': 6.0.1
   '@nuxtjs/style-resources': ^1.2.0
+  '@types/feather-icons': ^4.7.0
+  '@types/vue-feather-icons': ^5.0.2
   '@vue/composition-api': ^1.0.0-rc.13
+  '@vue/runtime-dom': ^3.1.4
   autoprefixer: ^10.2.6
+  core-js: ^3.15.2
   defu: ^5.0.0
   eslint: 7.30.0
+  feather-icons: ^4.28.0
   fibers: ^5.0.0
   node-fetch: ^2.6.1
   nuxt: 2.15.7
   nuxt-property-decorator: 2.9.1
   nuxt-windicss: ^1.1.3
   postcss: ^8.3.5
+  postcss-nested: ^5.0.5
   sass: ^1.35.1
   sass-loader: ^10.2.0
   tslib: ^2.3.0
   ufo: ^0.7.7
   vue: ^2.6.14
   vue-client-only: ^2.1.0
+  vue-feather-icons: ^5.1.0
   vue-meta: ^2.4.0
   vue-no-ssr: ^1.1.1
   vue-router: ^3.5.2
+  vuesax: ^4.0.1-alpha.25
   vuex: ^3.6.2
   windicss: ^3.1.4
 
 dependencies:
   '@nuxtjs/composition-api': 0.24.6_nuxt@2.15.7+vue@2.6.14
+  '@types/vue-feather-icons': 5.0.2
   '@vue/composition-api': 1.0.0-rc.13_vue@2.6.14
+  core-js: 3.15.2
   defu: 5.0.0
+  feather-icons: 4.28.0
   fibers: 5.0.0
   node-fetch: 2.6.1
   nuxt: 2.15.7
@@ -40,9 +51,11 @@ dependencies:
   ufo: 0.7.7
   vue: 2.6.14
   vue-client-only: 2.1.0
+  vue-feather-icons: 5.1.0
   vue-meta: 2.4.0
   vue-no-ssr: 1.1.1
   vue-router: 3.5.2
+  vuesax: 4.0.1-alpha.25
   vuex: 3.6.2_vue@2.6.14
 
 devDependencies:
@@ -51,10 +64,13 @@ devDependencies:
   '@nuxt/typescript-build': 2.1.0_@nuxt+types@2.15.7
   '@nuxtjs/eslint-config-typescript': 6.0.1_eslint@7.30.0
   '@nuxtjs/style-resources': 1.2.0
+  '@types/feather-icons': 4.7.0
+  '@vue/runtime-dom': 3.1.4
   autoprefixer: 10.2.6_postcss@8.3.5
   eslint: 7.30.0
   nuxt-windicss: 1.1.3
   postcss: 8.3.5
+  postcss-nested: 5.0.5_postcss@8.3.5
   sass: 1.35.1
   sass-loader: 10.2.0_fibers@5.0.0+sass@1.35.1
   tslib: 2.3.0
@@ -1896,6 +1912,10 @@ packages:
       '@types/serve-static': 1.13.9
     dev: true
 
+  /@types/feather-icons/4.7.0:
+    resolution: {integrity: sha512-vflOrmlHMGIGVN4AEl6ErPCNKBLcP1ehEpLqnJkTgf69r5QmJzy7BF1WzbBc8Hqs9KffROPT/JqlSKH4o5vB/w==}
+    dev: true
+
   /@types/file-loader/5.0.0:
     resolution: {integrity: sha512-evodFzM0PLOXmMZy8DhPN+toP6QgJiIteF6e8iD9T0xGBUllQA/DAb1nZwCIoNh7vuLvqCGPUdsLf3GSbcHd4g==}
     dependencies:
@@ -2014,6 +2034,12 @@ packages:
     resolution: {integrity: sha512-O3MmRAk6ZuAKa9CHgg0Pr0+lUOqoMLpc9AS4R8ano2auvsg7IE8syF3Xh/NPr26TWklxYcqoEEFdzLLs1fV9PQ==}
     dependencies:
       source-map: 0.6.1
+
+  /@types/vue-feather-icons/5.0.2:
+    resolution: {integrity: sha512-A/2vp6Kh6XmvSHVHX9dOn0zT8qOTh1Zw0n9wl7x5ITTSqQeA4hG/uA+1cgBbmsm1krv4EXDiNnIzyXz6JMKTwg==}
+    dependencies:
+      vue: 2.6.14
+    dev: false
 
   /@types/webpack-bundle-analyzer/3.9.3:
     resolution: {integrity: sha512-l/vaDMWGcXiMB3CbczpyICivLTB07/JNtn1xebsRXE9tPaUDEHgX3x7YP6jfznG5TOu7I4w0Qx1tZz61znmPmg==}
@@ -2284,6 +2310,31 @@ packages:
       tslib: 2.3.0
       vue: 2.6.14
     dev: false
+
+  /@vue/reactivity/3.1.4:
+    resolution: {integrity: sha512-YDlgii2Cr9yAoKVZFzgY4j0mYlVT73986X3e5SPp6ifqckSEoFSUWXZK2Tb53TB/9qO29BEEbspnKD3m3wAwkA==}
+    dependencies:
+      '@vue/shared': 3.1.4
+    dev: true
+
+  /@vue/runtime-core/3.1.4:
+    resolution: {integrity: sha512-qmVJgJuFxfT7M4qHQ4M6KqhKC66fjuswK+aBivE8dWiZ2rtIGl9gtJGpwqwjQEcKEBTOfvvrtrwBncYArJUO8Q==}
+    dependencies:
+      '@vue/reactivity': 3.1.4
+      '@vue/shared': 3.1.4
+    dev: true
+
+  /@vue/runtime-dom/3.1.4:
+    resolution: {integrity: sha512-vbmwgTxku1BU87Kw7r29adv0OIrDXCW0PslOPQT0O/9R5SqcXgS94Yj6zsztDjvghegenwIAPNLlDR1Auh5s+w==}
+    dependencies:
+      '@vue/runtime-core': 3.1.4
+      '@vue/shared': 3.1.4
+      csstype: 2.6.17
+    dev: true
+
+  /@vue/shared/3.1.4:
+    resolution: {integrity: sha512-6O45kZAmkLvzGLToBxEz4lR2W6kXohCtebV2UxjH9GXjd8X9AhEn68FN9eNanFtWNzvgw1hqd6HkPRVQalqf7Q==}
+    dev: true
 
   /@webassemblyjs/ast/1.9.0:
     resolution: {integrity: sha512-C6wW5L+b7ogSDVqymbkkvuW9kruN//YisMED04xzeBBqjHa2FYnmvOlS6Xj68xWQRgWvI9cIglsjFowH/RJyEA==}
@@ -2731,6 +2782,10 @@ packages:
       num2fraction: 1.2.2
       postcss: 7.0.36
       postcss-value-parser: 4.1.0
+    dev: false
+
+  /babel-helper-vue-jsx-merge-props/2.0.3:
+    resolution: {integrity: sha512-gsLiKK7Qrb7zYJNgiXKpXblxbV5ffSwR0f5whkPAaBAR4fhi6bwRZxX9wBlIc5M/v8CCkXUbXZL4N/nSE97cqg==}
     dev: false
 
   /babel-loader/8.2.2_44cd8e8988e8f6bdf4058c352d4e72dd:
@@ -3238,6 +3293,10 @@ packages:
       static-extend: 0.1.2
     dev: false
 
+  /classnames/2.3.1:
+    resolution: {integrity: sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==}
+    dev: false
+
   /clean-css/4.2.3:
     resolution: {integrity: sha512-VcMWDN54ZN/DS+g58HYL5/n4Zrqe8vHJpGA8KdgUXFU4fuP/aHNw8eld9SyEIyabIMJX/0RaY/fplOo5hYLSFA==}
     engines: {node: '>= 4.0'}
@@ -3462,6 +3521,11 @@ packages:
     requiresBuild: true
     dev: false
 
+  /core-js/3.15.2:
+    resolution: {integrity: sha512-tKs41J7NJVuaya8DxIOCnl8QuPHx5/ZVbFo1oKgVl1qHFBBrDctzQGtuLjPpRdNTWmKPH6oEvgN/MUID+l485Q==}
+    requiresBuild: true
+    dev: false
+
   /core-util-is/1.0.2:
     resolution: {integrity: sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=}
 
@@ -3669,7 +3733,6 @@ packages:
     resolution: {integrity: sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==}
     engines: {node: '>=4'}
     hasBin: true
-    dev: false
 
   /cssnano-preset-default/4.0.8:
     resolution: {integrity: sha512-LdAyHuq+VRyeVREFmuxUZR1TXjQm8QQU/ktoo/x7bz+SdOge1YKc5eMN6pRW7YWBmyq59CqYba1dJ5cUukEjLQ==}
@@ -3745,6 +3808,10 @@ packages:
     dependencies:
       css-tree: 1.1.3
     dev: false
+
+  /csstype/2.6.17:
+    resolution: {integrity: sha512-u1wmTI1jJGzCJzWndZo8mk4wnPTZd1eOIYTYvuEyOQGfmDl3TrabCCfKnOC86FZwW/9djqTl933UF/cS425i9A==}
+    dev: true
 
   /cuint/0.2.2:
     resolution: {integrity: sha1-QICG1AlVDCYxFVYZ6fp7ytw7mRs=}
@@ -4657,6 +4724,13 @@ packages:
     resolution: {integrity: sha512-HOnr8Mc60eNYl1gzwp6r5RoUyAn5/glBolUzP/Ez6IFVPMPirxn/9phgL6zhOtaTy7ISwPvQ+wT+hfcRZh/bzw==}
     dependencies:
       reusify: 1.0.4
+
+  /feather-icons/4.28.0:
+    resolution: {integrity: sha512-gRdqKESXRBUZn6Nl0VBq2wPHKRJgZz7yblrrc2lYsS6odkNFDnA4bqvrlEVRUPjE1tFax+0TdbJKZ31ziJuzjg==}
+    dependencies:
+      classnames: 2.3.1
+      core-js: 3.15.2
+    dev: false
 
   /fibers/5.0.0:
     resolution: {integrity: sha512-UpGv/YAZp7mhKHxDvC1tColrroGRX90sSvh8RMZV9leo+e5+EkRVgCEZPlmXeo3BUNQTZxUaVdLskq1Q2FyCPg==}
@@ -7258,6 +7332,16 @@ packages:
       postcss: 7.0.36
     dev: false
 
+  /postcss-nested/5.0.5_postcss@8.3.5:
+    resolution: {integrity: sha512-GSRXYz5bccobpTzLQZXOnSOfKl6TwVr5CyAQJUPub4nuRJSOECK5AqurxVgmtxP48p0Kc/ndY/YyS1yqldX0Ew==}
+    engines: {node: '>=10.0'}
+    peerDependencies:
+      postcss: ^8.1.13
+    dependencies:
+      postcss: 8.3.5
+      postcss-selector-parser: 6.0.6
+    dev: true
+
   /postcss-nesting/7.0.1:
     resolution: {integrity: sha512-FrorPb0H3nuVq0Sff7W2rnc3SmIcruVC6YwpcS+k687VxyxO33iE1amna7wHuRVzM8vfiYofXSBHNAZ3QhLvYg==}
     engines: {node: '>=6.0.0'}
@@ -7491,7 +7575,6 @@ packages:
     dependencies:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
-    dev: false
 
   /postcss-svgo/4.0.3:
     resolution: {integrity: sha512-NoRbrcMWTtUghzuKSoIm6XV+sJdvZ7GZSc3wdBN0W19FTtp2ko8NqLsgoh/m9CzNhU3KLPvQmjIwtaNFkaFTvw==}
@@ -9274,6 +9357,12 @@ packages:
       - supports-color
     dev: true
 
+  /vue-feather-icons/5.1.0:
+    resolution: {integrity: sha512-ZyM2yFGmL9DYLZYHm63KV1zCQOj8czC2LzDSkxoIp9o6zMAOY4yv1FkxbX+XNUwcH3RRrAuvf25Ij7CnUUsQVA==}
+    dependencies:
+      babel-helper-vue-jsx-merge-props: 2.0.3
+    dev: false
+
   /vue-hot-reload-api/2.3.4:
     resolution: {integrity: sha512-BXq3jwIagosjgNVae6tkHzzIk6a8MHFtzAdwhnV5VlvPTFxDCvIttgSiHWjdGoTJvXtmRu5HacExfdarRcFhog==}
     dev: false
@@ -9359,6 +9448,13 @@ packages:
 
   /vue/2.6.14:
     resolution: {integrity: sha512-x2284lgYvjOMj3Za7kqzRcUSxBboHqtgRE2zlos1qWaOye5yUmHn42LB1250NJBLRwEcdrB0JRwyPTEPhfQjiQ==}
+    dev: false
+
+  /vuesax/4.0.1-alpha.25:
+    resolution: {integrity: sha512-cVLpKsem/YsMSbiy2s2M0O6rr8wrakOUFn0JYxtVQ1WgbVUD0/kU2/GMPVeRBNOh+30tRy2TKreFmjqc53vIBQ==}
+    requiresBuild: true
+    dependencies:
+      vue-router: 3.5.2
     dev: false
 
   /vuex-class/0.3.2_74f9cfd67148c622b48e1672fc254539:
