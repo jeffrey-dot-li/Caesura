@@ -5,7 +5,7 @@ const config: NuxtConfig = {
   build: {
     postcss: {
       plugins: {
-        'postcss-nested': {}
+        'postcss-nested' : {}
       }
     }
   },

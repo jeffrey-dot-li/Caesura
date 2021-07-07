@@ -12,7 +12,7 @@
       </div>
 
       <div id="navbar-end" class="flex-row flex self-center">
-        <nuxt-link v-for="(v, k) in links" :key="k" to="/" class="rounded-md flex flex-col mx-2 px-2 duration-300 justify-center items-center hover:bg-opacity-80 hover:bg-gray-400">
+        <nuxt-link v-for="(v, k) in links" :key="k" to="/" class="rounded-md flex flex-col mx-2 px-2 duration-300 justify-center items-center hover:bg-secondary hover:bg-opacity-80">
           <span class="font-saira text-white text-md self-center">{{ v.name }}</span>
         </nuxt-link>
         <vs-input
@@ -36,17 +36,17 @@ import { defineComponent, ref, watch } from '@nuxtjs/composition-api';
 import { SearchIcon } from 'vue-feather-icons';
 export default defineComponent({
   components: { SearchIcon },
-  setup (_props, context) {
+  setup(_props, context) {
     const links = [
       { name: 'About' },
       { name: 'Music' },
-      { name: 'Contact' }
+      { name: 'Contact' },
     ] as const;
 
     const MusicSearch = ref('');
 
     return { MusicSearch, links };
-  }
+  },
 });
 </script>
 <style lang="scss">

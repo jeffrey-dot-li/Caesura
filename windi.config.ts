@@ -22,7 +22,8 @@ export default defineConfig({
       fontFamily: FontFamilyReference,
       colors:
       {
-        primary: '#ffba4c'
+        primary: '#ffba4c',
+        secondary: '#eb5757'
       },
 
       typography: {
